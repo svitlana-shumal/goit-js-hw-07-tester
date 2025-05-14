@@ -1,21 +1,11 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const categoriesList = document.querySelector("#categories");
+const categoriesList = document.querySelector("#categories");
+const categories = document.querySelectorAll(".item");
 
-//   if (!categoriesList) {
-//     console.error("Елемент #categories не знайдено!");
-//     return;
-//   }
+console.log(`Number of categories: ${categories.length}`);
 
-//   const categoryItems = document.querySelectorAll("#categories .item");
-
-//   console.log(`Number of categories: ${categoryItems.length}`);
-
-//   categoryItems.forEach((category) => {
-//     const categoryTitle =
-//       category.querySelector("h2")?.textContent || "Заголовок не знайдено";
-//     const categoryElements = category.querySelectorAll("ul li");
-
-//     console.log(`Category: ${categoryTitle}`);
-//     console.log(`Elements: ${categoryElements.length}`);
-//   });
-// });
+categories.forEach((category) => {
+  const categoryTitle = category.querySelector("h2").textContent;
+  const categoryItems = category.querySelectorAll("ul li");
+  console.log(`Category: ${categoryTitle}`);
+  console.log(`Elements: ${categoryItems.length}`);
+});
